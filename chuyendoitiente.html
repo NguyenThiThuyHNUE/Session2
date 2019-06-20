@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<form>
+    <input type="text"  id="amount">
+    <select  id="select1">
+        <option value="23000" >Viet Nam</option>
+        <option value="1" >USD</option>
+        <option value="0.8" >EURO</option>
+    </select>
+    <select  id="select2">
+        <option value="1">USD</option>
+        <option value="23000">Viet Nam</option>
+        <option value="0.8">EURO</option>
+    </select>
+    <input type="button" value="Convert" onclick="convert()" />
+
+
+</form>
+<p>Result: </p>
+<p id="result">
+
+</p>
+<script>
+
+
+    function convert() {
+
+            let nhap = Number(document.getElementById("amount").value);
+            let chon1 = Number(document.getElementById("select1").value);
+            let chon2 =Number(document.getElementById("select2").value);
+            let kq=(nhap * chon2)/chon1
+            document.getElementById("result").innerHTML= kq;
+
+        }
+</script>
+</body>
+</html>
