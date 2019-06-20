@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="nhap1">
+    <input type="text" id="nhap2">
+    <br>
+    <button id="cong" type="button"  onclick="cong()">Cộng</button>
+    <button id="tru" type="button"  onclick="tru()">Trừ</button>
+    <button id="nhan" type="button"  onclick="nhan()">Nhân</button>
+    <button id="chia" type="button"  onclick="chia()">Chia</button>
+
+<p> Kết quả: </p>
+<p id="result"></p>
+<script>
+    function cong() {
+        let numberOne= Number(document.getElementById("nhap1").value);
+        let numberTwo= Number(document.getElementById("nhap2").value);
+        let tong= numberOne+numberTwo;
+        document.getElementById("result").innerHTML=tong;
+    }
+    function tru() {
+        let numberOne= Number(document.getElementById("nhap1").value);
+        let numberTwo= Number(document.getElementById("nhap2").value);
+        let hieu= numberOne-numberTwo;
+        document.getElementById("result").innerHTML=hieu;
+    }
+    function nhan() {
+        let numberOne= Number(document.getElementById("nhap1").value);
+        let numberTwo= Number(document.getElementById("nhap2").value);
+        let tich= numberOne*numberTwo;
+        document.getElementById("result").innerHTML=tich;
+    }
+    function chia() {
+        let numberOne= Number(document.getElementById("nhap1").value);
+        let numberTwo= Number(document.getElementById("nhap2").value);
+        let thuong= numberOne/numberTwo;
+        document.getElementById("result").innerHTML=thuong;
+    }
+
+</script>
+</body>
+</html>
